@@ -1,1 +1,1 @@
-# appium-mobile-automation
+# python appium automation
