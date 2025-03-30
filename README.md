@@ -1,4 +1,4 @@
-# Setting Up Appium Environment for Python Testing
+# Setting Up Appium Environment for Mobile Automation Testing
 
 This guide walks you through setting up an Appium environment for mobile automation testing using Python on macOS.
 
