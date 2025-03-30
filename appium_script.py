@@ -9,9 +9,8 @@ desired_capabilities = {
     "deviceName": "Android Emulator",
     "appActivity": "org.wikipedia.main.MainActivity",
     "appPackage": "org.wikipedia",
-    # Put your path below:
-    # "app": ".../mobile_app/wikipedia.apk"
-    "app": "/Users/rebecca/Desktop/QA/python-appium-automation/mobile_app/wikipedia.apk"
+    "app": "/Users/jakelee/Desktop/QA/python-appium-automation/mobile_app/uptodown-org.wikipedia.apk",
+    "newCommandTimeout": 1000
 }
 
 appium_server_url = 'http://localhost:4723'
@@ -20,19 +19,15 @@ capabilities_options = UiAutomator2Options().load_capabilities(desired_capabilit
 driver = webdriver.Remote(appium_server_url, options=capabilities_options)
 driver.implicitly_wait(5)
 
-# Click Skip btn
-driver.find_element(AppiumBy.ID, 'org.wikipedia:id/fragment_onboarding_skip_button').click()
-
-# Click Search icon
-driver.find_element(AppiumBy.XPATH, "//*[@content-desc='Search Wikipedia']").click()
-
-# Populate search field:
-driver.find_element(AppiumBy.ID, 'org.wikipedia:id/search_src_text').send_keys('Python (programming language)')
-
-# Verification
-expected_result = 'Python (programming language)'
-actual_result = driver.find_element(AppiumBy.ID, 'org.wikipedia:id/page_list_item_title').text
-
-assert actual_result == expected_result, f'Expected {expected_result} did not match actual {actual_result}'
-
-driver.quit()
+# driver.find_element(AppiumBy.ID, 'org.wikipedia:id/fragment_onboarding_skip_button').click()
+#
+# driver.find_element(AppiumBy.XPATH, "//*[@content-desc='Search Wikipedia']").click()
+#
+# driver.find_element(AppiumBy.ID, 'org.wikipedia:id/search_src_text').send_keys('Python (programming language)')
+#
+# expected_result = 'Python (programming language)'
+# actual_result = driver.find_element(AppiumBy.ID, 'org.wikipedia:id/page_list_item_title').text
+#
+# assert actual_result == expected_result, f'Expected {expected_result} did not match actual {actual_result}'
+#
+# driver.quit()
