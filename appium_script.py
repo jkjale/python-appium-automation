@@ -2,18 +2,16 @@ from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
 from appium.options.android import UiAutomator2Options
 
-from time import sleep
-
-
 desired_capabilities = {
     "platformName": "Android",
     "automationName": 'uiautomator2',
-    "platformVersion": "10",
+    "platformVersion": "16",
     "deviceName": "Android Emulator",
     "appActivity": "org.wikipedia.main.MainActivity",
     "appPackage": "org.wikipedia",
     # Put your path below:
-    "app": ".../mobile_app/wikipedia.apk"
+    # "app": ".../mobile_app/wikipedia.apk"
+    "app": "/Users/rebecca/Desktop/QA/python-appium-automation/mobile_app/wikipedia.apk"
 }
 
 appium_server_url = 'http://localhost:4723'
