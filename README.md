@@ -124,7 +124,7 @@ Run the test:
 python test_app.py
 ```
 
-## Conclusion
+## Setup Complete!
 You now have a working Appium environment for Python testing!
 
 For more details, check out [Appium Documentation](https://appium.io/).

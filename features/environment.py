@@ -11,12 +11,12 @@ def mobile_driver_init(context, scenario_name):
     desired_capabilities = {
         "platformName": "Android",
         "automationName": 'uiautomator2',
-        "platformVersion": "10",
+        "platformVersion": "16",
         "deviceName": "Android Emulator",
         "appActivity": "org.wikipedia.main.MainActivity",
         "appPackage": "org.wikipedia",
-        # Put your path below:
-        "app": ".../mobile_app/wikipedia.apk"
+        "app": "/Users/jakelee/Desktop/QA/python-appium-automation/mobile_app/uptodown-org.wikipedia.apk",
+        "newCommandTimeout": 5000
     }
 
     appium_server_url = 'http://localhost:4723'
