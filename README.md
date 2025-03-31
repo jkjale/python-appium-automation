@@ -9,10 +9,14 @@ This guide walks you through setting up an Appium environment for mobile automat
 - **Python 3** installed
 - **Java Development Kit (JDK) 17+** installed
 
+---
+
 ## Step 1: Install Homebrew
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
+---
 
 ## Step 2: Install Node.js & npm
 ```bash
@@ -24,6 +28,8 @@ node -v
 npm -v
 ```
 
+---
+
 ## Step 3: Install Appium
 ```bash
 npm install -g appium
@@ -32,6 +38,8 @@ Verify installation:
 ```bash
 appium -v
 ```
+
+---
 
 ## Step 4: Install Appium Drivers
 ### For iOS:
@@ -42,6 +50,8 @@ npm install -g appium-xcuitest-driver
 ```bash
 npm install -g appium-uiautomator2-driver
 ```
+
+---
 
 ## Step 5: Install Java & Set JAVA_HOME
 ```bash
@@ -57,6 +67,8 @@ Verify Java installation:
 java -version
 ```
 
+---
+
 ## Step 6: Install Android SDK & Set Environment Variables
 ```bash
 brew install android-platform-tools
@@ -71,10 +83,14 @@ Verify installation:
 sdkmanager --list
 ```
 
+---
+
 ## Step 7: Install Appium Python Client
 ```bash
 pip install Appium-Python-Client
 ```
+
+---
 
 ## Step 8: Install Appium Doctor
 ```bash
@@ -84,6 +100,8 @@ Run Appium Doctor to check if everything is set up correctly:
 ```bash
 appium-doctor
 ```
+
+---
 
 ## Step 9: Launch a Simulator (iOS) or Emulator (Android)
 ### For iOS:
@@ -96,10 +114,14 @@ emulator -list-avds  # List available devices
 emulator -avd <device_name>  # Start an emulator
 ```
 
+---
+
 ## Step 10: Start Appium Server
 ```bash
 appium
 ```
+
+---
 
 ## Step 11: Run Your First Test
 Create a file `test_app.py` with the following example:
@@ -123,6 +145,8 @@ Run the test:
 ```bash
 python test_app.py
 ```
+
+---
 
 ## Setup Complete!
 You now have a working Appium environment for Python testing!
