@@ -1,3 +1,4 @@
+from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -36,7 +37,6 @@ class Page:
             EC.element_to_be_clickable(locator),
             message=f'Element not clickable by {locator}'
         )
-        self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
         element.click()
 
     def wait_until_visible(self, locator):
