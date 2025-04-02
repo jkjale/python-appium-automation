@@ -1,5 +1,6 @@
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
+from appium.options.ios import XCUITestOptions
 from app.application import Application
 
 
@@ -7,11 +8,25 @@ def mobile_driver_init(context, scenario_name):
     """
     :param context: Behave context
     """
+
+    ### Android ###
+    # desired_capabilities = {
+    #     "platformName": "Android",
+    #     "automationName": 'uiautomator2',
+    #     "platformVersion": "16",
+    #     "deviceName": "Android Emulator",
+    #     "appActivity": "org.wikipedia.main.MainActivity",
+    #     "appPackage": "org.wikipedia",
+    #     "app": "/Users/jakelee/Desktop/QA/python-appium-automation/mobile_app/uptodown-org.wikipedia.apk",
+    #     "newCommandTimeout": 5000
+    # }
+
+    ### iOS ###
     desired_capabilities = {
-        "platformName": "Android",
-        "automationName": 'uiautomator2',
-        "platformVersion": "16",
-        "deviceName": "Android Emulator",
+        "platformName": "iOS",
+        "automationName": 'XCUITest',
+        "platformVersion": "18.3",
+        "deviceName": "iPhone SE (3rd generation)",
         "appActivity": "org.wikipedia.main.MainActivity",
         "appPackage": "org.wikipedia",
         "app": "/Users/jakelee/Desktop/QA/python-appium-automation/mobile_app/uptodown-org.wikipedia.apk",
@@ -19,7 +34,11 @@ def mobile_driver_init(context, scenario_name):
     }
 
     appium_server_url = 'http://localhost:4723'
-    capabilities_options = UiAutomator2Options().load_capabilities(desired_capabilities)
+    ### Android ###
+    # capabilities_options = UiAutomator2Options().load_capabilities(desired_capabilities)
+
+    ### iOS ###
+    capabilities_options = XCUITestOptions().load_capabilities(desired_capabilities)
 
     context.driver = webdriver.Remote(appium_server_url, options=capabilities_options)
     context.driver.implicitly_wait(5)
