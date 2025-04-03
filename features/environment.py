@@ -26,10 +26,11 @@ def mobile_driver_init(context, scenario_name):
         "platformName": "iOS",
         "automationName": 'XCUITest',
         "platformVersion": "18.3",
-        "deviceName": "iPhone SE (3rd generation)",
-        "appActivity": "org.wikipedia.main.MainActivity",
-        "appPackage": "org.wikipedia",
-        "app": "/Users/jakelee/Desktop/QA/python-appium-automation/mobile_app/uptodown-org.wikipedia.apk",
+        "deviceName": "iPhone 16 Pro",
+        # "appActivity": "org.wikipedia.main.MainActivity",
+        # "appPackage": "org.wikipedia",
+        # "app": "/Users/jakelee/Desktop/QA/python-appium-automation/mobile_app/uptodown-org.wikipedia.apk",
+        "app": "/Users/jakelee/Library/Developer/Xcode/DerivedData/Wikipedia-axfgxiatahkzciffsmkcggqqcima/Build/Products/Debug-iphonesimulator/Wikipedia.app",
         "newCommandTimeout": 5000
     }
 
